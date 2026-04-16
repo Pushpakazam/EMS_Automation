@@ -1,0 +1,4 @@
+﻿id ,username,password ,type
+TC_LOGIN_01,pushpa@kazam.in,Shivanna@123,valid
+TC_LOGIN_02,pubcjcdcjnmdc,Wrongpass123,invalid
+TC_LOGIN_03,test@kazam.in,Test123,invalid

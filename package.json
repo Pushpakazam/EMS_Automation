@@ -1,15 +1,33 @@
 {
-  "name": "ems_automation",
+  "name": "website_automation",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "scripts": {
+    "test": "npx playwright test",
+    "report:pdf": "node scripts/generate-pdf.js",
+    "report:mail": "node scripts/sendEmail.js",
+    "full:run": "npm run test && npm run report:pdf && npm run report:mail"
+  },
   "devDependencies": {
-    "@playwright/test": "^1.58.2",
-    "@types/node": "^25.2.2"
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^25.0.2",
+    "allure-playwright": "^3.4.3",
+    "archiver": "^7.0.1",
+    "dotenv": "^17.2.3",
+    "monocart-reporter": "^2.10.0",
+    "nodemailer": "^7.0.13",
+    "ortoni-report": "^4.0.7",
+    "playwright": "^1.57.0",
+    "puppeteer": "^24.34.0"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.16",
+    "http-server": "^14.1.1",
+    "pdf-merger-js": "^5.1.2"
   }
 }

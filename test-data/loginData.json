@@ -1,0 +1,12 @@
+[
+  {
+    "id": "TC_LOGIN_01",
+    "username": "pushpa@kazam.in",
+    "password": "Shivanna@123"
+  },
+  {
+    "id": "TC_LOGIN_02",
+    "username": "invalid@kazam.in",
+    "password": "WrongPass123"
+  }
+]

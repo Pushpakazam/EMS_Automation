@@ -11,27 +11,18 @@ export default defineConfig({
   workers: 1,
 
   reporter: [
-    // Playwright HTML (NON-blocking)
-    ['html', {
-      outputFolder: 'playwright-report',
-      open: 'never'
-    }],
-
-    // Monocart Reporter (stable, OneDrive-safe)
-    ['monocart-reporter', {
-      name: 'EMS Automation Report',
-      outputDir: './monocart-output',
-      outputFile: 'monocart-report.html',
-      clean: false,
-
-      attachments: {
-        ignoreMissing: true
-      },
-
-      visitor: (/** @type {any} */ data) => {
-        if (data.type === 'suite') data.collapsed = false;
-        if (data.type === 'test') data.hidden = false;
-        return data;
+    ['list'],
+    ['ortoni-report', {
+      folderPath: 'ortoni-report',
+      filename: 'index.html',
+      title: 'Kazam EMS Automation Report',
+      projectName: 'EMS',
+      testType: 'E2E',
+      authorName: 'Pushpa',
+      meta: {
+        Environment: 'SIT',
+        Team: 'QA',
+        Module: 'EMS'
       }
     }]
   ],
