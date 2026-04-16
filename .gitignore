@@ -4,6 +4,25 @@ node_modules/
 /test-results/
 /playwright-report/
 /blob-report/
+/reports/
 /playwright/.cache/
 /playwright/.auth/
+
+# Secrets
+.env
 emsCredentials.js
+
+# Database
+*.sqlite
+/tmp-ortoni-check.sqlite
+
+# Logs
+*.log
+*.tmp
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
