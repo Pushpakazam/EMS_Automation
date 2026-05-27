@@ -93,7 +93,7 @@ class AddChargerPage {
 
   async login(email, password) {
     await this.page.goto(
-      'https://novo.kazam.in/auth/login'
+      'https://kazam-olectra.vercel.app/org'
     );
 
     const emailInput = this.page.locator('input[name="email"]');
@@ -321,3 +321,5 @@ class AddChargerPage {
 }
 
 module.exports = { AddChargerPage };
+
+

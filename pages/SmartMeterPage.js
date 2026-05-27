@@ -75,7 +75,6 @@ class SmartMeterPage {
 
     const notNowBtn = this.page.locator('button:has-text("Not now")');
     if (await notNowBtn.isVisible()) await notNowBtn.click();
-
     const orgCard = this.page.locator('p[title="OEM EMS TEST"]');
     while (!(await orgCard.isVisible().catch(() => false))) {
       await this.page.mouse.wheel(0, 600).catch(() => {});
@@ -354,7 +353,6 @@ class SmartMeterPage {
 
     const rowText = rowCells.join(' | ').toLowerCase();
     expect(rowText).toContain(String(plan.query).toLowerCase());
-
     console.log(`[SEARCH] PASS (${plan.label})`);
 
     await searchBox.click();
@@ -472,3 +470,4 @@ module.exports = {
   SmartMeterPage,
   METER_CONDITIONS,
 };
+
